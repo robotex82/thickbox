@@ -1,0 +1,13 @@
+<h1>Single image</h1>
+
+<%= link_to "/images/single.jpg", { :class => "thickbox", :title => "add a caption to title attribute / or leave blank" } do %>
+  <%= image_tag "single_t.jpg", { :alt => "Single Image" } %>
+<% end %>
+
+<h1>Gallery images</h1>
+
+<% %w(plant1 plant2 plant3 plant4).each do |image| %>
+  <%= link_to "/images/#{image}.jpg", { :class => "thickbox", :title => "add a caption to title attribute / or leave blank", :rel => "gallery-plants" } do %>
+    <%= image_tag "#{image}_t.jpg", { :alt => "Single Image" } %>
+  <% end %>
+<% end %>
